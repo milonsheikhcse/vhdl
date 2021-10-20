@@ -1,0 +1,44 @@
+--------------------------------------
+-- XOR gate ()
+--------------------------------------
+
+library ieee;
+use ieee.std_logic_1164.all;
+
+--------------------------------------
+
+entity XOR_gate is
+port(	a: in std_logic;
+	    b: in std_logic;
+		c: in std_logic;
+		d: in std_logic;
+	    F: out std_logic
+);
+end XOR_gate;  
+
+--------------------------------------
+
+architecture Gate of XOR_gate is
+begin
+
+    process(a,b,c,d)
+	variable i: integer :=0;
+    begin
+        -- compare to truth table
+	if (a=1) then
+            i:=i+1;
+	if (b=1) then
+            i:=i+1;
+	if (c=1) then
+            i:=i+1;
+	if (d=1) then
+            i:=i+1;
+	
+	if (i mod 2)
+	    F <= '1';
+	else
+	    F <= '0';
+	end if;
+    end process;
+
+end Gate;
